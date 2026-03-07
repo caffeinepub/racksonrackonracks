@@ -86,13 +86,16 @@
     --sidebar-ring: 0.62 0.26 240;
 
     /* Custom tokens */
-    --vendor-bg: 0.74 0.22 55;
-    --vendor-text: 0.10 0.04 55;
+    --vendor-bg: 0.70 0.24 48;
+    --vendor-text: 0.12 0.05 45;
     --glow-blue: 0.68 0.28 240;
     --glow-green: 0.72 0.28 142;
     --glow-orange: 0.74 0.22 55;
-    --event-orange: 0.74 0.22 55;
+    --event-orange: 0.70 0.24 48;
     --surface-glass: 0.16 0.09 148 / 88%;
+    /* Active nav tab = vivid green */
+    --nav-active-bg: 0.30 0.14 148;
+    --nav-active-fg: 0.96 0.08 148;
   }
 }
 
@@ -217,8 +220,9 @@
   }
 
   .vendor-banner {
-    background: oklch(var(--vendor-bg));
-    color: oklch(var(--vendor-text));
+    background: linear-gradient(135deg, oklch(0.72 0.26 48), oklch(0.66 0.28 40));
+    color: oklch(0.10 0.05 42);
+    box-shadow: 0 2px 16px oklch(0.70 0.24 48 / 0.50);
   }
 
   /* Scanline texture overlay */

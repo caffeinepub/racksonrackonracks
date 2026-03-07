@@ -68,7 +68,12 @@ export default function SignInPage() {
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="bg-card border border-border rounded-3xl p-10 shadow-boutique text-center"
+          className="rounded-3xl p-10 shadow-boutique text-center"
+          style={{
+            background: "oklch(0.22 0.12 148)",
+            border: "1px solid oklch(0.40 0.16 148 / 0.7)",
+            boxShadow: "0 20px 60px oklch(0 0 0 / 0.45)",
+          }}
         >
           <div className="w-24 h-24 rounded-full bg-primary/20 border-4 border-primary mx-auto mb-6 flex items-center justify-center">
             <User className="w-12 h-12 text-primary" />
@@ -134,7 +139,15 @@ export default function SignInPage() {
         </p>
       </motion.div>
 
-      <div className="bg-card border border-border rounded-3xl p-8 shadow-boutique">
+      <div
+        className="rounded-3xl p-8 shadow-boutique"
+        style={{
+          background: "oklch(0.22 0.12 148)",
+          border: "1px solid oklch(0.40 0.16 148 / 0.7)",
+          boxShadow:
+            "0 20px 60px oklch(0 0 0 / 0.45), 0 0 0 1px oklch(0.32 0.12 148 / 0.4)",
+        }}
+      >
         {/* Tab Switcher */}
         <div className="flex gap-2 mb-8 bg-secondary/50 p-1 rounded-2xl">
           <button
@@ -143,9 +156,21 @@ export default function SignInPage() {
             onClick={() => setActiveTab("signin")}
             className={`flex-1 py-2.5 rounded-xl font-heading font-bold text-sm transition-all ${
               activeTab === "signin"
-                ? "bg-primary text-primary-foreground shadow-glow"
+                ? ""
                 : "text-foreground/70 hover:text-foreground"
             }`}
+            style={
+              activeTab === "signin"
+                ? {
+                    background:
+                      "linear-gradient(135deg, oklch(0.32 0.16 148), oklch(0.26 0.14 148))",
+                    boxShadow:
+                      "0 0 18px oklch(0.45 0.20 148 / 0.55), 0 4px 12px oklch(0 0 0 / 0.30)",
+                    color: "oklch(0.96 0.08 148)",
+                    border: "1px solid oklch(0.45 0.18 148 / 0.7)",
+                  }
+                : undefined
+            }
           >
             Sign In
           </button>
@@ -155,9 +180,21 @@ export default function SignInPage() {
             onClick={() => setActiveTab("create")}
             className={`flex-1 py-2.5 rounded-xl font-heading font-bold text-sm transition-all ${
               activeTab === "create"
-                ? "bg-primary text-primary-foreground shadow-glow"
+                ? ""
                 : "text-foreground/70 hover:text-foreground"
             }`}
+            style={
+              activeTab === "create"
+                ? {
+                    background:
+                      "linear-gradient(135deg, oklch(0.32 0.16 148), oklch(0.26 0.14 148))",
+                    boxShadow:
+                      "0 0 18px oklch(0.45 0.20 148 / 0.55), 0 4px 12px oklch(0 0 0 / 0.30)",
+                    color: "oklch(0.96 0.08 148)",
+                    border: "1px solid oklch(0.45 0.18 148 / 0.7)",
+                  }
+                : undefined
+            }
           >
             Create Account
           </button>

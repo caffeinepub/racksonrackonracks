@@ -74,10 +74,22 @@ export default function Navbar({
                 px-4 py-2 rounded-xl font-heading font-semibold text-sm transition-all duration-200
                 ${
                   activeTab === tab
-                    ? "bg-primary text-primary-foreground shadow-glow"
+                    ? "shadow-glow-green text-white"
                     : "text-foreground hover:bg-secondary hover:text-foreground"
                 }
               `}
+              style={
+                activeTab === tab
+                  ? {
+                      background:
+                        "linear-gradient(135deg, oklch(0.32 0.16 148), oklch(0.26 0.14 148))",
+                      boxShadow:
+                        "0 0 18px oklch(0.45 0.20 148 / 0.60), 0 4px 12px oklch(0 0 0 / 0.35)",
+                      color: "oklch(0.96 0.08 148)",
+                      border: "1px solid oklch(0.45 0.18 148 / 0.7)",
+                    }
+                  : undefined
+              }
             >
               {label}
             </button>
@@ -113,10 +125,22 @@ export default function Navbar({
               px-3 py-1.5 rounded-xl font-heading font-semibold text-xs whitespace-nowrap transition-all duration-200 shrink-0
               ${
                 activeTab === tab
-                  ? "bg-primary text-primary-foreground shadow-glow"
+                  ? "text-white"
                   : "text-foreground hover:bg-secondary"
               }
             `}
+            style={
+              activeTab === tab
+                ? {
+                    background:
+                      "linear-gradient(135deg, oklch(0.32 0.16 148), oklch(0.26 0.14 148))",
+                    boxShadow:
+                      "0 0 14px oklch(0.45 0.20 148 / 0.55), 0 3px 8px oklch(0 0 0 / 0.30)",
+                    color: "oklch(0.96 0.08 148)",
+                    border: "1px solid oklch(0.45 0.18 148 / 0.7)",
+                  }
+                : undefined
+            }
           >
             {label}
           </button>

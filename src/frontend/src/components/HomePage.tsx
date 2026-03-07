@@ -190,9 +190,9 @@ export default function HomePage({ setActiveTab }: HomePageProps) {
                       }}
                       className="px-4 py-1.5 rounded-full font-heading text-xs font-bold uppercase tracking-widest"
                       style={{
-                        background: "oklch(0.20 0.09 148 / 0.75)",
-                        border: "1px solid oklch(0.40 0.14 148 / 0.60)",
-                        color: "oklch(0.78 0.18 240)",
+                        background: "oklch(0.24 0.13 148 / 0.85)",
+                        border: "1px solid oklch(0.44 0.16 148 / 0.70)",
+                        color: "oklch(0.82 0.20 240)",
                         backdropFilter: "blur(8px)",
                       }}
                     >
@@ -301,7 +301,7 @@ export default function HomePage({ setActiveTab }: HomePageProps) {
                     />
                     <div
                       className="p-2.5"
-                      style={{ background: "oklch(0.18 0.09 148 / 0.95)" }}
+                      style={{ background: "oklch(0.22 0.12 148)" }}
                     >
                       <p className="font-heading font-bold text-xs text-card-foreground truncate">
                         {product.name}
@@ -386,8 +386,8 @@ export default function HomePage({ setActiveTab }: HomePageProps) {
                     <div
                       className="shrink-0 w-9 h-9 rounded-xl flex items-center justify-center text-base transition-all duration-200 group-hover:scale-110"
                       style={{
-                        background: "oklch(0.22 0.10 148 / 0.80)",
-                        border: "1px solid oklch(0.36 0.12 148 / 0.6)",
+                        background: "oklch(0.26 0.14 148 / 0.85)",
+                        border: "1px solid oklch(0.44 0.16 148 / 0.70)",
                       }}
                     >
                       {icon}
@@ -411,9 +411,9 @@ export default function HomePage({ setActiveTab }: HomePageProps) {
                 transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
                 className="rounded-3xl overflow-hidden card-glow"
                 style={{
-                  border: "1px solid oklch(0.32 0.10 148 / 0.6)",
+                  border: "1px solid oklch(0.40 0.16 148 / 0.70)",
                   boxShadow:
-                    "0 24px 80px oklch(0 0 0 / 0.50), 0 0 0 1px oklch(0.30 0.10 148 / 0.4)",
+                    "0 24px 80px oklch(0 0 0 / 0.50), 0 0 0 1px oklch(0.35 0.14 148 / 0.4)",
                 }}
               >
                 <img
@@ -425,7 +425,7 @@ export default function HomePage({ setActiveTab }: HomePageProps) {
                 {/* Image overlay label */}
                 <div
                   className="px-5 py-4"
-                  style={{ background: "oklch(0.18 0.09 148 / 0.95)" }}
+                  style={{ background: "oklch(0.22 0.12 148)" }}
                 >
                   <p className="font-display font-black text-sm text-card-foreground">
                     The Boutique — Where Style Lives
@@ -518,8 +518,8 @@ export default function HomePage({ setActiveTab }: HomePageProps) {
                 <div
                   className="rounded-2xl overflow-hidden card-glow transition-all duration-300 flex flex-col"
                   style={{
-                    background: "oklch(0.18 0.09 148 / 0.95)",
-                    border: "1px solid oklch(0.30 0.10 148 / 0.6)",
+                    background: "oklch(0.22 0.12 148)",
+                    border: "1px solid oklch(0.40 0.16 148 / 0.65)",
                     boxShadow: "0 8px 32px oklch(0 0 0 / 0.40)",
                   }}
                 >

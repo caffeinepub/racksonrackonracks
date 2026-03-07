@@ -101,7 +101,13 @@ export default function SupportPage() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.1 }}
         >
-          <div className="bg-card border border-border rounded-3xl p-8 shadow-boutique">
+          <div
+            className="rounded-3xl p-8 shadow-boutique"
+            style={{
+              background: "oklch(0.22 0.12 148)",
+              border: "1px solid oklch(0.40 0.16 148 / 0.65)",
+            }}
+          >
             <div className="flex items-center gap-3 mb-6">
               <MessageCircle className="w-7 h-7 text-primary" />
               <h2 className="font-display font-black text-2xl text-foreground">
@@ -221,7 +227,13 @@ export default function SupportPage() {
           </div>
 
           {/* Quick Contact Info */}
-          <div className="mt-6 bg-secondary/50 border border-border rounded-2xl p-5">
+          <div
+            className="mt-6 rounded-2xl p-5"
+            style={{
+              background: "oklch(0.22 0.12 148)",
+              border: "1px solid oklch(0.40 0.16 148 / 0.65)",
+            }}
+          >
             <h3 className="font-display font-black text-base text-foreground mb-3">
               Other Ways to Reach Us 🌿
             </h3>
@@ -256,7 +268,11 @@ export default function SupportPage() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + i * 0.1 }}
-                className="bg-card border border-border rounded-2xl overflow-hidden shadow-boutique"
+                className="rounded-2xl overflow-hidden shadow-boutique"
+                style={{
+                  background: "oklch(0.22 0.12 148)",
+                  border: "1px solid oklch(0.40 0.16 148 / 0.65)",
+                }}
               >
                 <button
                   type="button"

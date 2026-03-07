@@ -30,10 +30,10 @@ export default function InformationPage() {
         <div
           className="rounded-3xl p-8 relative overflow-hidden"
           style={{
-            background: "oklch(0.18 0.09 148 / 0.95)",
-            border: "1px solid oklch(0.32 0.12 148 / 0.6)",
+            background: "oklch(0.22 0.12 148)",
+            border: "1px solid oklch(0.40 0.16 148 / 0.70)",
             boxShadow:
-              "0 20px 60px oklch(0 0 0 / 0.45), inset 0 1px 0 oklch(0.40 0.14 148 / 0.2)",
+              "0 20px 60px oklch(0 0 0 / 0.45), inset 0 1px 0 oklch(0.45 0.16 148 / 0.2)",
           }}
         >
           {/* Decorative corner plants */}
@@ -110,13 +110,20 @@ export default function InformationPage() {
           {/* Women's Clothing */}
           <motion.div
             whileHover={{ scale: 1.02 }}
-            className="bg-card border border-border rounded-3xl p-6 shadow-boutique card-glow transition-all"
+            className="rounded-3xl p-6 shadow-boutique card-glow transition-all"
+            style={{
+              background: "oklch(0.22 0.12 148)",
+              border: "1px solid oklch(0.40 0.16 148 / 0.65)",
+            }}
           >
             <div className="text-5xl mb-4">👗</div>
             <h3 className="font-display font-black text-2xl text-foreground mb-3">
               Women's Clothing
             </h3>
-            <p className="font-body text-foreground/70 leading-relaxed mb-4">
+            <p
+              className="font-body leading-relaxed mb-4"
+              style={{ color: "oklch(0.78 0.16 240 / 0.80)" }}
+            >
               From floral summer dresses to cozy oversized hoodies and colorful
               crop tops — we carry pieces for every mood, every season, and
               every vibe.
@@ -126,7 +133,12 @@ export default function InformationPage() {
                 (tag) => (
                   <span
                     key={tag}
-                    className="px-3 py-1 rounded-full bg-secondary text-foreground text-sm font-heading font-semibold border border-border"
+                    className="px-3 py-1 rounded-full text-sm font-heading font-semibold"
+                    style={{
+                      background: "oklch(0.28 0.14 148 / 0.80)",
+                      border: "1px solid oklch(0.44 0.16 148 / 0.60)",
+                      color: "oklch(0.80 0.18 240)",
+                    }}
                   >
                     {tag}
                   </span>
@@ -138,13 +150,20 @@ export default function InformationPage() {
           {/* Plushies */}
           <motion.div
             whileHover={{ scale: 1.02 }}
-            className="bg-card border border-border rounded-3xl p-6 shadow-boutique pink-glow transition-all"
+            className="rounded-3xl p-6 shadow-boutique card-glow transition-all"
+            style={{
+              background: "oklch(0.22 0.12 148)",
+              border: "1px solid oklch(0.40 0.16 148 / 0.65)",
+            }}
           >
             <div className="text-5xl mb-4">🧸</div>
             <h3 className="font-display font-black text-2xl text-foreground mb-3">
               Collectible Plushies
             </h3>
-            <p className="font-body text-foreground/70 leading-relaxed mb-4">
+            <p
+              className="font-body leading-relaxed mb-4"
+              style={{ color: "oklch(0.78 0.16 240 / 0.80)" }}
+            >
               Fan-favorite characters you know and love, now in irresistibly
               soft plush form. Perfect for collecting, gifting, or just keeping
               for yourself!
@@ -159,7 +178,12 @@ export default function InformationPage() {
               ].map((tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1 rounded-full bg-secondary text-foreground text-sm font-heading font-semibold border border-border"
+                  className="px-3 py-1 rounded-full text-sm font-heading font-semibold"
+                  style={{
+                    background: "oklch(0.28 0.14 148 / 0.80)",
+                    border: "1px solid oklch(0.44 0.16 148 / 0.60)",
+                    color: "oklch(0.80 0.18 240)",
+                  }}
                 >
                   {tag}
                 </span>
@@ -204,7 +228,11 @@ export default function InformationPage() {
             <motion.div
               key={title}
               whileHover={{ y: -4 }}
-              className="bg-secondary/50 border border-border rounded-2xl p-5 text-center shadow-boutique transition-all"
+              className="rounded-2xl p-5 text-center shadow-boutique transition-all card-glow"
+              style={{
+                background: "oklch(0.22 0.12 148)",
+                border: "1px solid oklch(0.40 0.16 148 / 0.65)",
+              }}
             >
               <div className="text-4xl mb-3">{icon}</div>
               <h4 className="font-display font-black text-lg text-foreground mb-2">
@@ -224,9 +252,33 @@ export default function InformationPage() {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
       >
-        <div className="vendor-banner rounded-3xl p-8 text-center shadow-boutique">
-          <Package className="w-12 h-12 mx-auto mb-4" />
-          <h2 className="font-display font-black text-3xl mb-2">
+        <div
+          className="rounded-3xl p-8 text-center relative overflow-hidden"
+          style={{
+            background:
+              "linear-gradient(135deg, oklch(0.72 0.26 48), oklch(0.64 0.28 40))",
+            boxShadow:
+              "0 8px 40px oklch(0.68 0.24 48 / 0.55), 0 2px 8px oklch(0 0 0 / 0.35)",
+            color: "oklch(0.10 0.05 42)",
+          }}
+        >
+          {/* Decorative glow orb */}
+          <div
+            className="absolute top-0 right-0 w-64 h-64 pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(circle, oklch(0.88 0.24 55 / 0.25) 0%, transparent 70%)",
+              filter: "blur(30px)",
+            }}
+          />
+          <Package
+            className="w-12 h-12 mx-auto mb-4"
+            style={{ color: "oklch(0.10 0.05 42)" }}
+          />
+          <h2
+            className="font-display font-black text-3xl mb-2"
+            style={{ color: "oklch(0.10 0.05 42)" }}
+          >
             Meet Us In Person
           </h2>
           <p className="font-heading font-bold text-lg mb-1">
@@ -236,7 +288,10 @@ export default function InformationPage() {
           <p className="font-heading font-semibold text-xl mt-1">
             Los Angeles • 5:00AM – 5:30PM
           </p>
-          <p className="font-body mt-4 opacity-75">
+          <p
+            className="font-body mt-4"
+            style={{ color: "oklch(0.15 0.05 42 / 0.80)" }}
+          >
             Come find us! We'd love to see you in person 💕
           </p>
         </div>

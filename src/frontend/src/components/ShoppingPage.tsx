@@ -320,10 +320,10 @@ export default function ShoppingPage({ addToCart }: ShoppingPageProps) {
         <div
           className="rounded-2xl overflow-hidden"
           style={{
-            background: "oklch(0.18 0.09 148 / 0.95)",
-            border: "1px solid oklch(0.42 0.18 55 / 0.55)",
+            background: "oklch(0.22 0.12 148)",
+            border: "1px solid oklch(0.40 0.16 148 / 0.65)",
             boxShadow:
-              "0 8px 32px oklch(0 0 0 / 0.40), 0 0 0 1px oklch(0.38 0.16 55 / 0.20)",
+              "0 8px 32px oklch(0 0 0 / 0.40), 0 0 0 1px oklch(0.35 0.14 148 / 0.25)",
           }}
         >
           <div className="px-6 py-5 border-b border-border flex items-center gap-3">
@@ -452,10 +452,22 @@ export default function ShoppingPage({ addToCart }: ShoppingPageProps) {
               px-6 py-2.5 rounded-2xl font-heading font-bold text-sm transition-all duration-200
               ${
                 filter === value
-                  ? "bg-primary text-primary-foreground shadow-glow scale-105"
+                  ? "scale-105"
                   : "bg-secondary text-foreground hover:bg-muted border border-border"
               }
             `}
+            style={
+              filter === value
+                ? {
+                    background:
+                      "linear-gradient(135deg, oklch(0.32 0.16 148), oklch(0.26 0.14 148))",
+                    boxShadow:
+                      "0 0 18px oklch(0.45 0.20 148 / 0.55), 0 4px 12px oklch(0 0 0 / 0.30)",
+                    color: "oklch(0.96 0.08 148)",
+                    border: "1px solid oklch(0.45 0.18 148 / 0.7)",
+                  }
+                : undefined
+            }
           >
             {label}
           </button>
@@ -501,7 +513,13 @@ export default function ShoppingPage({ addToCart }: ShoppingPageProps) {
                   data-ocid={`shop.item.${globalIndex}`}
                   className="group"
                 >
-                  <div className="bg-card border border-border rounded-2xl overflow-hidden shadow-boutique card-glow transition-all duration-300 hover:-translate-y-1 flex flex-col h-full">
+                  <div
+                    className="rounded-2xl overflow-hidden shadow-boutique card-glow transition-all duration-300 hover:-translate-y-1 flex flex-col h-full"
+                    style={{
+                      background: "oklch(0.22 0.12 148)",
+                      border: "1px solid oklch(0.40 0.16 148 / 0.65)",
+                    }}
+                  >
                     {/* Product Image */}
                     <div className="relative overflow-hidden aspect-square">
                       <img
