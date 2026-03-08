@@ -61,7 +61,7 @@ export default function HomePage({ setActiveTab }: HomePageProps) {
         <div className="absolute inset-0 z-0">
           <img
             src="/assets/generated/hero-store.dim_1200x600.jpg"
-            alt="RacksonRackOnRacks store"
+            alt="Racks On Rack On Racks store"
             className="w-full h-full object-cover scale-105"
             style={{ filter: "saturate(1.3) brightness(0.6)" }}
           />
@@ -140,7 +140,7 @@ export default function HomePage({ setActiveTab }: HomePageProps) {
                     className="block text-6xl md:text-7xl lg:text-8xl text-shimmer"
                     style={{ letterSpacing: "-0.03em" }}
                   >
-                    Rackson
+                    Racks On
                   </span>
                   <span
                     className="block text-7xl md:text-8xl lg:text-9xl text-glow-amber-rack"
@@ -152,7 +152,7 @@ export default function HomePage({ setActiveTab }: HomePageProps) {
                     className="block text-6xl md:text-7xl lg:text-8xl text-shimmer"
                     style={{ letterSpacing: "-0.03em" }}
                   >
-                    OnRacks
+                    On Racks
                   </span>
                 </h1>
 

@@ -68,7 +68,7 @@ export default function InformationPage() {
           >
             <p>
               <span className="font-display font-black text-xl logo-flicker">
-                RacksonRackOnRacks
+                Racks On Rack On Racks
               </span>{" "}
               was founded by{" "}
               <span className="font-display font-bold text-glow-green">

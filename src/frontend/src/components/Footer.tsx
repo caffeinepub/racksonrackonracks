@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <h3 className="font-display font-black text-xl text-foreground mb-2">
-              Rackson<span className="text-accent">Rack</span>OnRacks
+              Racks On <span className="text-accent">Rack</span> On Racks
             </h3>
             <p className="font-body text-foreground/60 text-sm">
               Founded by Kissel Guzman.
@@ -50,7 +50,7 @@ export default function Footer() {
 
         <div className="border-t border-border pt-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="font-body text-foreground/40 text-sm">
-            © {year} RacksonRackOnRacks. All rights reserved.
+            © {year} Racks On Rack On Racks. All rights reserved.
           </p>
           <p className="font-body text-foreground/30 text-xs">
             Built with love using{" "}

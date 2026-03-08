@@ -28,32 +28,32 @@
 }
 
 /* ===== RacksonRackOnRacks Design Tokens ===== */
-/* Vivid green background, bright blue text, orange events accent */
+/* Light dark green background, dark navy blue text, orange events accent */
 @layer base {
   :root {
     --radius: 1rem;
 
-    /* Core palette — deep dark green backgrounds */
-    --background: 0.14 0.08 148;
-    --foreground: 0.82 0.18 240;
+    /* Core palette — light dark green backgrounds (sage/forest muted green) */
+    --background: 0.38 0.07 148;
+    --foreground: 0.22 0.14 240;
 
-    --card: 0.18 0.09 148;
-    --card-foreground: 0.85 0.16 240;
+    --card: 0.42 0.08 148;
+    --card-foreground: 0.20 0.15 240;
 
-    --popover: 0.16 0.09 148;
-    --popover-foreground: 0.83 0.16 240;
+    --popover: 0.40 0.07 148;
+    --popover-foreground: 0.22 0.14 240;
 
-    /* Primary = electric cobalt blue for CTAs */
-    --primary: 0.62 0.26 240;
-    --primary-foreground: 0.10 0.03 148;
+    /* Primary = dark navy blue for CTAs */
+    --primary: 0.28 0.18 240;
+    --primary-foreground: 0.95 0.02 148;
 
-    /* Secondary = slightly lighter dark green */
-    --secondary: 0.20 0.08 148;
-    --secondary-foreground: 0.82 0.17 240;
+    /* Secondary = slightly darker muted green */
+    --secondary: 0.34 0.06 148;
+    --secondary-foreground: 0.22 0.15 240;
 
     /* Muted */
-    --muted: 0.18 0.07 148;
-    --muted-foreground: 0.58 0.12 240;
+    --muted: 0.36 0.06 148;
+    --muted-foreground: 0.38 0.10 240;
 
     /* Accent = warm amber-orange for events & highlights */
     --accent: 0.74 0.22 55;
@@ -64,38 +64,38 @@
     --destructive-foreground: 0.985 0 0;
 
     /* Borders */
-    --border: 0.26 0.08 148;
-    --input: 0.22 0.08 148;
-    --ring: 0.62 0.26 240;
+    --border: 0.46 0.06 148;
+    --input: 0.44 0.06 148;
+    --ring: 0.28 0.18 240;
 
     /* Charts (kept for compat) */
     --chart-1: 0.74 0.22 55;
-    --chart-2: 0.62 0.26 240;
+    --chart-2: 0.28 0.18 240;
     --chart-3: 0.55 0.20 148;
     --chart-4: 0.80 0.18 85;
     --chart-5: 0.7 0.2 60;
 
     /* Sidebar */
-    --sidebar: 0.12 0.07 148;
-    --sidebar-foreground: 0.80 0.18 240;
-    --sidebar-primary: 0.62 0.26 240;
-    --sidebar-primary-foreground: 0.10 0.03 148;
+    --sidebar: 0.34 0.06 148;
+    --sidebar-foreground: 0.22 0.15 240;
+    --sidebar-primary: 0.28 0.18 240;
+    --sidebar-primary-foreground: 0.95 0.02 148;
     --sidebar-accent: 0.74 0.22 55;
     --sidebar-accent-foreground: 0.10 0.04 55;
-    --sidebar-border: 0.26 0.08 148;
-    --sidebar-ring: 0.62 0.26 240;
+    --sidebar-border: 0.46 0.06 148;
+    --sidebar-ring: 0.28 0.18 240;
 
     /* Custom tokens */
     --vendor-bg: 0.70 0.24 48;
     --vendor-text: 0.12 0.05 45;
-    --glow-blue: 0.68 0.28 240;
-    --glow-green: 0.72 0.28 142;
+    --glow-blue: 0.32 0.20 240;
+    --glow-green: 0.55 0.22 142;
     --glow-orange: 0.74 0.22 55;
     --event-orange: 0.70 0.24 48;
-    --surface-glass: 0.16 0.09 148 / 88%;
-    /* Active nav tab = vivid green */
-    --nav-active-bg: 0.30 0.14 148;
-    --nav-active-fg: 0.96 0.08 148;
+    --surface-glass: 0.40 0.07 148 / 88%;
+    /* Active nav tab = muted green highlight */
+    --nav-active-bg: 0.50 0.10 148;
+    --nav-active-fg: 0.18 0.16 240;
   }
 }
 
@@ -107,9 +107,9 @@
   body {
     @apply bg-background text-foreground font-body antialiased;
     background-image:
-      radial-gradient(ellipse 80% 50% at 20% 10%, oklch(0.22 0.14 148 / 0.55) 0%, transparent 60%),
-      radial-gradient(ellipse 60% 40% at 80% 80%, oklch(0.20 0.12 200 / 0.35) 0%, transparent 55%),
-      radial-gradient(ellipse 50% 30% at 50% 50%, oklch(0.18 0.10 240 / 0.20) 0%, transparent 60%);
+      radial-gradient(ellipse 80% 50% at 20% 10%, oklch(0.44 0.09 148 / 0.55) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 80% 80%, oklch(0.42 0.08 160 / 0.35) 0%, transparent 55%),
+      radial-gradient(ellipse 50% 30% at 50% 50%, oklch(0.40 0.07 148 / 0.20) 0%, transparent 60%);
     background-attachment: fixed;
     animation: aurora-drift 18s ease-in-out infinite alternate;
   }
@@ -123,27 +123,27 @@
 @keyframes aurora-drift {
   0% {
     background-image:
-      radial-gradient(ellipse 80% 50% at 20% 10%, oklch(0.22 0.14 148 / 0.55) 0%, transparent 60%),
-      radial-gradient(ellipse 60% 40% at 80% 80%, oklch(0.20 0.12 200 / 0.35) 0%, transparent 55%),
-      radial-gradient(ellipse 50% 30% at 50% 50%, oklch(0.18 0.10 240 / 0.20) 0%, transparent 60%);
+      radial-gradient(ellipse 80% 50% at 20% 10%, oklch(0.44 0.09 148 / 0.55) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 80% 80%, oklch(0.42 0.08 160 / 0.35) 0%, transparent 55%),
+      radial-gradient(ellipse 50% 30% at 50% 50%, oklch(0.40 0.07 148 / 0.20) 0%, transparent 60%);
   }
   33% {
     background-image:
-      radial-gradient(ellipse 70% 60% at 60% 20%, oklch(0.24 0.15 148 / 0.50) 0%, transparent 60%),
-      radial-gradient(ellipse 80% 50% at 10% 70%, oklch(0.20 0.14 200 / 0.40) 0%, transparent 55%),
-      radial-gradient(ellipse 60% 40% at 80% 40%, oklch(0.22 0.12 240 / 0.25) 0%, transparent 60%);
+      radial-gradient(ellipse 70% 60% at 60% 20%, oklch(0.46 0.10 148 / 0.50) 0%, transparent 60%),
+      radial-gradient(ellipse 80% 50% at 10% 70%, oklch(0.42 0.09 160 / 0.40) 0%, transparent 55%),
+      radial-gradient(ellipse 60% 40% at 80% 40%, oklch(0.40 0.08 148 / 0.25) 0%, transparent 60%);
   }
   66% {
     background-image:
-      radial-gradient(ellipse 60% 70% at 40% 80%, oklch(0.26 0.16 148 / 0.45) 0%, transparent 60%),
-      radial-gradient(ellipse 70% 40% at 90% 20%, oklch(0.22 0.10 200 / 0.30) 0%, transparent 55%),
-      radial-gradient(ellipse 80% 50% at 20% 30%, oklch(0.20 0.14 240 / 0.22) 0%, transparent 60%);
+      radial-gradient(ellipse 60% 70% at 40% 80%, oklch(0.48 0.10 148 / 0.45) 0%, transparent 60%),
+      radial-gradient(ellipse 70% 40% at 90% 20%, oklch(0.44 0.08 160 / 0.30) 0%, transparent 55%),
+      radial-gradient(ellipse 80% 50% at 20% 30%, oklch(0.40 0.09 148 / 0.22) 0%, transparent 60%);
   }
   100% {
     background-image:
-      radial-gradient(ellipse 90% 40% at 70% 60%, oklch(0.20 0.12 148 / 0.50) 0%, transparent 60%),
-      radial-gradient(ellipse 50% 60% at 30% 10%, oklch(0.24 0.14 200 / 0.38) 0%, transparent 55%),
-      radial-gradient(ellipse 70% 60% at 60% 90%, oklch(0.16 0.10 240 / 0.20) 0%, transparent 60%);
+      radial-gradient(ellipse 90% 40% at 70% 60%, oklch(0.42 0.08 148 / 0.50) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 60% at 30% 10%, oklch(0.46 0.09 160 / 0.38) 0%, transparent 55%),
+      radial-gradient(ellipse 70% 60% at 60% 90%, oklch(0.38 0.07 148 / 0.20) 0%, transparent 60%);
   }
 }
 

@@ -35,7 +35,7 @@ export default function Navbar({
           data-ocid="nav.home.link"
         >
           <span className="font-display font-black text-xl leading-none tracking-tight logo-flicker">
-            Rackson<span className="text-glow-amber-rack">Rack</span>OnRacks
+            Racks On <span className="text-glow-amber-rack">Rack</span> On Racks
           </span>
           <svg
             className="animate-leaf-sway ml-1 shrink-0"
