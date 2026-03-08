@@ -420,7 +420,10 @@ export default function HomePage({ setActiveTab }: HomePageProps) {
                   src="/assets/generated/clothing-rack.dim_600x400.jpg"
                   alt="Clothing racks in our boutique"
                   className="w-full h-64 md:h-80 object-cover"
-                  style={{ filter: "saturate(1.2) brightness(0.9)" }}
+                  style={{
+                    filter:
+                      "saturate(1.2) brightness(0.9) drop-shadow(0 0 12px oklch(0.85 0.35 142 / 0.8))",
+                  }}
                 />
                 {/* Image overlay label */}
                 <div
@@ -517,11 +520,21 @@ export default function HomePage({ setActiveTab }: HomePageProps) {
               >
                 <div
                   className="rounded-2xl overflow-hidden card-glow transition-all duration-300 flex flex-col"
-                  style={{
-                    background: "oklch(0.22 0.12 148)",
-                    border: "1px solid oklch(0.40 0.16 148 / 0.65)",
-                    boxShadow: "0 8px 32px oklch(0 0 0 / 0.40)",
-                  }}
+                  style={
+                    i === 1 || i === 2
+                      ? {
+                          background: "oklch(0.18 0.14 142)",
+                          border: "2px solid oklch(0.85 0.35 142)",
+                          boxShadow:
+                            "0 0 18px 6px oklch(0.85 0.35 142 / 0.70), 0 0 40px 12px oklch(0.85 0.35 142 / 0.35), 0 8px 32px oklch(0 0 0 / 0.40)",
+                          animation: "neon-pulse 2.2s ease-in-out infinite",
+                        }
+                      : {
+                          background: "oklch(0.22 0.12 148)",
+                          border: "1px solid oklch(0.40 0.16 148 / 0.65)",
+                          boxShadow: "0 8px 32px oklch(0 0 0 / 0.40)",
+                        }
+                  }
                 >
                   <div className="relative overflow-hidden">
                     <img

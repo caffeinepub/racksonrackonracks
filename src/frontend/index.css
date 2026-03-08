@@ -462,3 +462,22 @@
   animation: glow-amber-rack 2.4s ease-in-out infinite;
   font-weight: 900;
 }
+
+/* ===== Neon Green Rack Pulse ===== */
+@keyframes neon-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 14px 4px oklch(0.85 0.35 142 / 0.65),
+      0 0 35px 10px oklch(0.85 0.35 142 / 0.30),
+      0 8px 32px oklch(0 0 0 / 0.40);
+    border-color: oklch(0.85 0.35 142);
+  }
+  50% {
+    box-shadow:
+      0 0 24px 8px oklch(0.90 0.38 142 / 0.85),
+      0 0 55px 16px oklch(0.85 0.35 142 / 0.45),
+      0 0 90px 20px oklch(0.78 0.30 142 / 0.20),
+      0 8px 32px oklch(0 0 0 / 0.45);
+    border-color: oklch(0.92 0.38 142);
+  }
+}
